@@ -22,7 +22,7 @@ public class HowManyThreadsHelper {
   static void waitForVirtualThreadsToCatchUp(int startedThreads, AtomicLong runningThreadsCounter)
       throws InterruptedException {
     long runningThreads;
-    while (startedThreads - (runningThreads = runningThreadsCounter.get()) > 0) {
+    while (startedThreads > (runningThreads = runningThreadsCounter.get())) {
       System.out.printf(
           "Waiting for virtual threads to catch up (%,d running)...%n", runningThreads);
       Thread.sleep(100);
