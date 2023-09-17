@@ -28,6 +28,16 @@ have a look at this tutorial: [How to Change Java Versions in Windows](https://w
 
 You might also find these GitHub repositories interesting:
 
+Virtual Threads:
 * https://github.com/SvenWoltmann/virtual-threads-quarkus
 * https://github.com/SvenWoltmann/virtual-threads-spring
+
+Structured Concurrency:
+* https://github.com/SvenWoltmann/scoped-values
+
+Scoped Values:
+* https://github.com/SvenWoltmann/scoped-values
+
+Pattern Matching for Switch:
 * https://github.com/SvenWoltmann/pattern-matching-for-switch
+
