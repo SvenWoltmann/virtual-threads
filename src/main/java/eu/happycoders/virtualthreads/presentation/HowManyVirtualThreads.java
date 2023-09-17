@@ -37,13 +37,13 @@ public class HowManyVirtualThreads {
             i, runningThreads, time);
 
         if (i - runningThreads > 100_000) {
-          HowManyThreadsHelper.waitForVirtualThreadsToCatchUp(i, runningThreadsCounter);
+          HowManyThreadsHelper.waitForVirtualThreadsToCatchUp(i, runningThreadsCounter, startTime);
         }
       }
     }
 
     HowManyThreadsHelper.waitForVirtualThreadsToCatchUp(
-        NUMBER_OF_VIRTUAL_THREADS, runningThreadsCounter);
+        NUMBER_OF_VIRTUAL_THREADS, runningThreadsCounter, startTime);
 
     // Sleep, so we can look at the memory usage
     Thread.sleep(Duration.ofHours(1));

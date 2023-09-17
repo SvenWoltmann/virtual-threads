@@ -19,14 +19,19 @@ public class HowManyThreadsHelper {
     System.out.println("I died after " + millis + " milliseconds");
   }
 
-  static void waitForVirtualThreadsToCatchUp(int startedThreads, AtomicLong runningThreadsCounter)
+  static void waitForVirtualThreadsToCatchUp(
+      int startedThreads, AtomicLong runningThreadsCounter, long startTime)
       throws InterruptedException {
     long runningThreads;
     while (startedThreads > (runningThreads = runningThreadsCounter.get())) {
+      long time = System.currentTimeMillis() - startTime;
       System.out.printf(
-          "Waiting for virtual threads to catch up (%,d running)...%n", runningThreads);
+          "Waiting for virtual threads to catch up: (%,d running after %,d ms)...%n",
+          runningThreads, time);
       Thread.sleep(100);
     }
-    System.out.printf("Virtual threads caught up: %,d running)...%n", runningThreads);
+    long time = System.currentTimeMillis() - startTime;
+    System.out.printf(
+        "Virtual threads caught up: %,d running after %,d ms%n", runningThreads, time);
   }
 }
