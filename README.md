@@ -4,6 +4,9 @@ This repository contains several examples for "Virtual Threads",
 a feature described in [JEP 444](https://openjdk.org/jeps/444)
 and released in [Java 21](https://www.happycoders.eu/java/java-21-features/).
 
+The article [Java Virtual Threads (JEP 444): How They Work, Examples, Pitfalls](https://www.happycoders.eu/java/virtual-threads/)
+explains virtual threads in detail (German version: [Virtual Threads in Java: Funktionsweise, Beispiele und Grenzen](https://www.happycoders.eu/de/java/virtual-threads/)).
+
 I use these examples in my presentations on virtual threads.
 
 
@@ -16,7 +19,7 @@ Virtual Threads:
 * https://github.com/SvenWoltmann/virtual-threads-spring
 
 Structured Concurrency:
-* https://github.com/SvenWoltmann/scoped-values
+* https://github.com/SvenWoltmann/structured-concurrency
 
 Scoped Values:
 * https://github.com/SvenWoltmann/scoped-values
